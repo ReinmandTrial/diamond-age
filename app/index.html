@@ -87,7 +87,7 @@
 						резка бетона, расширение проёмов
 						<span>в Москве и Подмосковье</span>
 					</p>
-					<button class="banner__btn btn">
+					<button class="banner__btn btn btn-popup">
 						Оставить заявку
 					</button>
 				</div>
@@ -103,11 +103,11 @@
 			<!-- CONTENT start  -->
 			<div class="content">
 				<div class="page-main">
-					<div class="container">
-						<div class="page-main__content">
+					<div class="page-main__content">
+						<!-- section price start -->
+						<div class="price">
+							<div class="container">
 
-							<!-- section price start -->
-							<div class="price">
 								<p class="price__title h2">Цены на алмазное бурение</p>
 								<div class="price__container">
 									<div class="slider-price-all">
@@ -194,7 +194,7 @@
 													данных</a>
 											</div>
 										</label>
-										<button class="request__btn btn">Оставить заявку</button>
+										<button class="request__btn btn btn-popup">Оставить заявку</button>
 									</div>
 								</div>
 								<a href="#" class="price__watch-all t1">
@@ -202,10 +202,13 @@
 									<span class="price__watch-all-text">смотреть все цены</span>
 								</a>
 							</div>
-							<!-- section price end -->
+						</div>
+						<!-- section price end -->
 
-							<!-- section use start -->
-							<div class="use">
+						<!-- section use start -->
+						<div class="use">
+							<div class="container">
+
 								<p class="use__title h2">Области применения</p>
 								<div class="use__container">
 									<a href="#" class="use__slide">
@@ -258,10 +261,13 @@
 									</a>
 								</div>
 							</div>
-							<!-- section use end -->
+						</div>
+						<!-- section use end -->
 
-							<!-- section material start -->
-							<div class="material">
+						<!-- section material start -->
+						<div class="material">
+							<div class="container">
+
 								<p class="material__title h2 material__title_first">Работаем со всеми видами материала</p>
 								<div class="material__container t1">
 									<div class="material__slide">
@@ -301,17 +307,42 @@
 									</div>
 								</div>
 							</div>
-							<!-- section material end -->
-
-
-
-
 						</div>
+						<!-- section material end -->
 					</div>
 				</div>
 			</div>
 			<!-- CONTENT end -->
-
+			<!-- POPUP  -->
+			<div class="popup">
+				<div class="popup__body">
+					<div class="popup__content request consultation">
+						<p class="request__title h3">Оставить заявку</p>
+						<p class="request__descr">
+							Закажите консультацию по телефону или бесплатный выезд нашего инженера на Ваш объект
+							прямо сейчас и получите
+						</p>
+						<div class="request__input-box">
+							<span class="icon icon-profile"></span>
+							<input type="text" class="request__input input" placeholder="Введите имя">
+						</div>
+						<div class="request__input-box">
+							<span class="icon icon-phone"></span>
+							<input type="text" class="request__input input" placeholder="Номер телефона">
+						</div>
+						<label class="request__agreement">
+							<input type="checkbox" class="checkbox-none">
+							<span class="checkbox-style"></span>
+							<div class="request__agreement-text">
+								Согласие на <a href="#" class="request__agreement-link">обработку
+									данных</a>
+							</div>
+						</label>
+						<button class="request__btn btn btn-popup">Оставить заявку</button>
+					</div>
+				</div>
+			</div>
+			<!-- POPUP END  -->
 		</main>
 		<!-- MAIN end -->
 

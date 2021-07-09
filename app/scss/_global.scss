@@ -142,7 +142,7 @@ textarea {
 /* request start */
 
 .request {
-	padding: 40px;
+	padding: 50px 40px;
 	width: 430px;
 	flex: 0 0 430px;
 	background: linear-gradient(180deg, #0b3973 0%, #0e2e57 100%);
@@ -214,3 +214,47 @@ textarea {
 	}
 }
 /* request end */
+
+// popup 
+.popup{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	height: 100vh;
+	&__body{
+		background: $text1;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.request{
+		background: $white;
+	}
+	.request__title{
+		color: $text1;
+	}
+	.request__descr{
+		color: $text3;
+	}
+	.request__input{
+		background: $color2;
+	}
+	.request__agreement-link{
+		color: #29AFE9;
+	}
+	.request__agreement-text{
+		color: $text1;
+	}
+	.checkbox-style{
+		background: $color2;
+	}
+	.checkbox-none:checked+.checkbox-style{
+		background: $color2 url("../images/svg/check.svg") 5px 6px no-repeat;
+	}
+}
+// popup end 

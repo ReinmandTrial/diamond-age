@@ -38,3 +38,17 @@ new Swiper('.slider-price-all__container', {
    },
 });
 /* slider-price-all end */
+
+// popup
+   $('.btn-popup').on('click',function(){
+      $('.popup').fadeIn();
+   })
+   //нажатие вне body
+   $(document).on('click', function (e) {
+      if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
+         $('.popup').fadeOut();
+      }
+      e.stopPropagation();
+   });
+   //нажатие вне body
+//popup end
