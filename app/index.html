@@ -1,59 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Шаблон</title>
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-  <!-- WRAPPER start -->
-  <div class="wrapper">
+	<!-- WRAPPER start -->
+	<div class="wrapper">
 
-    <!-- HEADER start  -->
-    
-    <header class="header">
-      
-    </header>
-    
-    <!-- HEADER end  -->
+		<!-- HEADER start  -->
 
-    <!-- MAIN start  -->
-    <main class="main">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<a href="#S" class="header__logo logo">
+						<img src="images/svg/logo.svg" alt="Логотип">
+					</a>
+					<div class="menu burger-menu">
+						<div class="menu__item">
+							<a href="#" class="menu__link">цены</a>
+						</div>
+						<div class="menu__item">
+							<a href="#" class="menu__link">области</a>
+						</div>
+						<div class="menu__item">
+							<a href="#" class="menu__link">материалы</a>
+						</div>
+						<div class="menu__item toggle-block">
+							<a href="#" class="menu__item-header toggle-btn">услуги</a>
+							<div class="menu__item-body toggle-body">
+								<!-- <div class="menu__item-body-bg">
+                        </div> -->
+								<a href="#">Алмазная резка</a>
+								<a href="#">Усиление проёмов</a>
+								<a href="#">Демонтажные работы</a>
+								<a href="#">Штробление стен</a>
+							</div>
+						</div>
+						<div class="menu__item">
+							<a href="#" class="menu__link">Работа</a>
+						</div>
+						<a href="#" class="logo-burger">
+							<img src="images/svg/logo-burger.svg" alt="">
+						</a>
+						<span class="icon icon-close burger-btn"></span>
+					</div>
+					<div class="header__info">
+						<div class="header__schedule">
+							<span class="icon icon-clock"></span>
+							<p class="header__schedule-text">с 8:00 до 22:00</p>
+						</div>
+						<div class="header__socials-links">
+							<span class="icon icon-inst"></span>
+							<a href="#" class="header__socials-link t2">Мы в соц. сетях</a>
+						</div>
+					</div>
+					<div class="header__contacts">
+						<span class="icon icon-whatsapp"></span>
+						<div class="header__phone-num-block">
+							<p class="header__phone-num">+7(977) 528-02-41</p>
+							<p class="header__phone-num">+7(499) 964-66-69</p>
+						</div>
+					</div>
+					<span class="icon icon-burger burger-btn"></span>
+
+				</div>
+
+			</div>
+		</header>
+
+		<!-- HEADER end  -->
+
+		<!-- BANNER start -->
+
+		<section class="banner">
+			<div class="container">
+				<div class="banner__content">
+					<img src="images/banner-bg.png" alt="" class="banner__bg">
+					<p class="banner__title h1">
+						Алмазное бурение отверстий,
+						резка бетона, расширение проёмов
+						<span>в Москве и Подмосковье</span>
+					</p>
+					<button class="banner__btn btn">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- BANNER end -->
+
+		<!-- MAIN start  -->
+		<main class="main">
 
 
-      <!-- CONTENT start  -->
-      <div class="content">
+			<!-- CONTENT start  -->
+			<div class="content">
+				<div class="page-main">
+					<div class="container">
+						<div class="page-main__content">
 
-      </div>
-      <!-- CONTENT end -->
+							<!-- section price start -->
+							<div class="price">
+								<p class="price__title h2">Цены на алмазное бурение</p>
+								<div class="price__container">
+									<div class="slider-price-all">
+										<div class="slider-price-all__container swiper-container">
+											<div class="slider-price-all__wrapper swiper-wrapper">
+												<div class="slider-price-all__slide  swiper-slide">
+													<div class="table">
+														<p class="table__subtitle">Диаметр отверстия (мм)</p>
+														<div class="table__column">
+															<div class="table__row">до 72 мм</div>
+															<div class="table__row">82 – 102 мм</div>
+															<div class="table__row">112 – 122 мм</div>
+															<div class="table__row">132 – 142 мм</div>
+															<div class="table__row">152 – 162 мм</div>
+															<div class="table__row">182 мм</div>
+															<div class="table__row">200 мм</div>
+														</div>
+													</div>
+												</div>
+												<div class="slider-price-all__slide swiper-slide">
+													<div class="table">
+														<p class="table__subtitle">Кирпич</p>
+														<div class="table__column">
+															<div class="table__row">21 руб.</div>
+															<div class="table__row">21 руб.</div>
+															<div class="table__row">25 руб.</div>
+															<div class="table__row">29 руб.</div>
+															<div class="table__row">30 руб.</div>
+															<div class="table__row">38 руб.</div>
+															<div class="table__row">40 руб.</div>
+														</div>
+													</div>
+												</div>
+												<div class="slider-price-all__slide swiper-slide">
+													<div class="table">
+														<p class="table__subtitle">Неармированный бетон</p>
+														<div class="table__column">
+															<div class="table__row">26 руб.</div>
+															<div class="table__row">28 руб.</div>
+															<div class="table__row">38 руб.</div>
+															<div class="table__row">40 руб.</div>
+															<div class="table__row">50 руб.</div>
+															<div class="table__row">55 руб.</div>
+															<div class="table__row">62 руб.</div>
+														</div>
+													</div>
+												</div>
+												<div class="slider-price-all__slide swiper-slide">
+													<div class="table">
+														<p class="table__subtitle">Армированный бетон</p>
+														<div class="table__column">
+															<div class="table__row">30 руб.</div>
+															<div class="table__row">32 руб.</div>
+															<div class="table__row">42 руб.</div>
+															<div class="table__row">42 руб.</div>
+															<div class="table__row">54 руб.</div>
+															<div class="table__row">60 руб.</div>
+															<div class="table__row">66 руб.</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="request consultation">
+										<p class="request__title h3">Остались вопросы?</p>
+										<p class="request__descr">
+											Закажите консультацию по телефону или бесплатный выезд нашего инженера на Ваш объект
+											прямо сейчас и получите
+										</p>
+										<div class="request__input-box">
+											<span class="icon icon-profile"></span>
+											<input type="text" class="request__input input" placeholder="Введите имя">
+										</div>
+										<div class="request__input-box">
+											<span class="icon icon-phone"></span>
+											<input type="text" class="request__input input" placeholder="Номер телефона">
+										</div>
+										<label class="request__agreement">
+											<input type="checkbox" class="checkbox-none">
+											<span class="checkbox-style"></span>
+											<div class="request__agreement-text">
+												Согласие на <a href="#" class="request__agreement-link">обработку
+													данных</a>
+											</div>
+										</label>
+										<button class="request__btn btn">Оставить заявку</button>
+									</div>
+								</div>
+								<a href="#" class="price__watch-all t1">
+									<span class="icon icon-doc"></span>
+									<span class="price__watch-all-text">смотреть все цены</span>
+								</a>
+							</div>
+							<!-- section price end -->
 
-      <!-- popup  -->
+							<!-- section use start -->
+							<div class="use">
+								<p class="use__title h2">Области применения</p>
+								<div class="use__container">
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img1.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под трубы отопления</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img2.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под трубы водоснабжения</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img3.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под трубы канализации</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img4.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под трубы воздуховода</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img5.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под вентиляцию</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img6.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под кондиционер</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img7.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под КИВ-125</p>
+									</a>
+									<a href="#" class="use__slide">
+										<div class="use__slide-img">
+											<img src="images/use-img8.png" alt="">
+										</div>
+										<p class="use__slide-text t1">Алмазное бурение отверстий под дымоход</p>
+									</a>
+								</div>
+							</div>
+							<!-- section use end -->
 
-      <!-- popup end  -->
-    </main>
-    <!-- MAIN end -->
+							<!-- section material start -->
+							<div class="material">
+								<p class="material__title h2 material__title_first">Работаем со всеми видами материала</p>
+								<div class="material__container t1">
+									<div class="material__slide">
+										<div class="material__slide-img">
+											<img src="images/material-img1.png" alt="">
+											<span class="icon icon-diamond"></span>
+										</div>
+										<p class="material__slide-text">Бетон</p>
+									</div>
+									<div class="material__slide">
+										<div class="material__slide-img">
+											<img src="images/material-img2.png" alt="">
+											<span class="icon icon-diamond"></span>
+										</div>
+										<p class="material__slide-text">Камень</p>
+									</div>
+									<div class="material__slide">
+										<div class="material__slide-img">
+											<img src="images/material-img3.png" alt="">
+											<span class="icon icon-diamond"></span>
+										</div>
+										<p class="material__slide-text">Асфальт</p>
+									</div>
+									<div class="material__slide">
+										<div class="material__slide-img">
+											<img src="images/material-img4.png" alt="">
+											<span class="icon icon-diamond"></span>
+										</div>
+										<p class="material__slide-text">Керамогранит</p>
+									</div>
+									<div class="material__slide">
+										<div class="material__slide-img">
+											<img src="images/material-img5.png" alt="">
+											<span class="icon icon-diamond"></span>
+										</div>
+										<p class="material__slide-text">кирпич</p>
+									</div>
+								</div>
+							</div>
+							<!-- section material end -->
 
-    <!-- FOOTER start  -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-
-        </div>
-      </div>
-    </footer>
-    <!-- FOOTER end -->
-
-  </div>
-  <!-- WRAPPER end -->
 
 
 
-  <!-- SCRIPTS start  -->
-   <script src="js/main.min.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- CONTENT end -->
+
+		</main>
+		<!-- MAIN end -->
+
+		<!-- FOOTER start  -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content t6">
+					<div class="footer__logo logo">
+						<img src="images/svg/logo.svg" alt="">
+					</div>
+					<div class="footer__container">
+						<div class="footer__block">
+							<p class="footer__title">Полезная информация</p>
+							<a href="#" class="footer__link">Наши цены</a>
+							<a href="#" class="footer__link">Области применения</a>
+							<a href="#" class="footer__link">Используемые материалы</a>
+							<a href="#" class="footer__link">Список услуг</a>
+							<a href="#" class="footer__link">Выполненые работы</a>
+						</div>
+						<div class="footer__block">
+							<p class="footer__title">Наши услуги</p>
+							<a href="#" class="footer__link">Алмазная резка</a>
+							<a href="#" class="footer__link">Алмазное бурение</a>
+							<a href="#" class="footer__link">Расширение проемов</a>
+							<a href="#" class="footer__link">Усиление проемов</a>
+							<a href="#" class="footer__link">Резка проемов</a>
+						</div>
+						<div class="footer__block">
+							<p class="footer__title">Контактная информация</p>
+							<div class="footer__schedule">
+								<span class="icon icon-clock"></span>
+								<p class="footer__schedule-text">с 8:00 до 22:00</p>
+							</div>
+							<div class="footer__contacts">
+								<span class="icon icon-whatsapp"></span>
+								<div class="footer__phone-num-block">
+									<p class="footer__phone-num">+7(977) 528-02-41</p>
+									<p class="footer__phone-num">+7(499) 964-66-69</p>
+								</div>
+							</div>
+							<div class="footer__adress">
+								<span class="icon icon-mark"></span>
+								<p class="footer__adress-text">
+									г. Москва ул. Пушкина 103
+								</p>
+							</div>
+
+						</div>
+						<div class="footer__block t2">
+							<div class="footer__sub">
+								<p class="footer__sub-title">Подпишись на обновления:</p>
+								<div class="footer__sub-box">
+									<input type="text" class="footer__sub-input input" placeholder="Ваш е-mail">
+									<button class="footer__sub-btn"><span class="icon icon-mail"></span></button>
+								</div>
+							</div>
+							<div class="footer__socials">
+								<p class="footer__socials-text">Наши соц. сети:</p>
+								<span class="icon icon-inst"></span>
+								<span class="icon icon-vk"></span>
+							</div>
+							<div class="footer__payment">
+								<p class="footer__payment-text">Принимаем к оплате:</p>
+
+								<img src="images/svg/world.svg" alt="" class="footer__svg-world">
+								<img src="images/svg/mastercard.svg" alt="" class="footer__svg-mastercard">
+								<img src="images/svg/visa.svg" alt="" class="footer__svg-visa">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER end -->
+
+	</div>
+	<!-- WRAPPER end -->
+
+
+
+	<!-- SCRIPTS start  -->
+	<script src="js/main.min.js"></script>
 
 
 
