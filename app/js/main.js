@@ -23,32 +23,75 @@ $('.burger-btn').on('click', function () {
 
 /* slider-price-all start */
 new Swiper('.slider-price-all__container', {
-   // grabCursor: true,
-   simulateTouch: false,
-   // loop: true,
-   // slideToClickedSlide: true,
-   // slidesPerView: 4,
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+   },
    breakpoints: {
       0: {
          slidesPerView: 2,
+         simulateTouch: true,
+         touchRatio: 1,
       },
       576: {
          slidesPerView: 4,
+         simulateTouch: false,
+         touchRatio: 0,
       },
    },
 });
 /* slider-price-all end */
 
+/* slidercalc start */
+new Swiper('.slider-calc', {
+   navigation: {
+      nextEl: '',
+      prevEl: '',
+   },
+   simulateTouch: false,
+   // touchRatio: 0,
+   // slidesPerView: 1,
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+   },
+});
+/* slider-calc end */
+
+/* slider-completed start */
+new Swiper('.completed__slider-container', {
+   loop: true,
+   slideToClickedSlide: true,
+   // slidesPerView: 3,
+   // spaceBetween: 30,
+   navigation: {
+      nextEl: '.completed-button-next',
+      prevEl: '.completed-button-prev',
+   },
+   breakpoints: {
+      0: {
+         slidesPerView: 1,
+      },
+      576: {
+         slidesPerView: 2,
+      },
+      992: {
+         slidesPerView: 3,
+      },
+   },
+});
+/* slider-completed end */
+
 // popup
-   $('.btn-popup').on('click',function(){
-      $('.popup').fadeIn();
-   })
-   //нажатие вне body
-   $(document).on('click', function (e) {
-      if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
-         $('.popup').fadeOut();
-      }
-      e.stopPropagation();
-   });
+$('.btn-popup').on('click', function () {
+   $('.popup').fadeIn();
+})
+//нажатие вне body
+$(document).on('click', function (e) {
+   if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
+      $('.popup').fadeOut();
+   }
+   e.stopPropagation();
+});
    //нажатие вне body
 //popup end

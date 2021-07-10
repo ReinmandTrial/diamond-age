@@ -74,7 +74,28 @@ textarea {
 .checkbox-none:checked + .checkbox-style {
 	background: $white url("../images/svg/check.svg") 5px 6px no-repeat;
 }
-
+.radio-style {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid $color3;
+	background: $white;
+	margin-right: 10px;
+}
+.radio-none:checked + .radio-style::before {
+	content: " ";
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #2ab1eb;
+}
 .select {
 	&-input {
 		display: none;
@@ -85,6 +106,9 @@ textarea {
 .slider-price-all {
 	margin-right: 30px;
 	flex: 1 1 auto;
+	&__container {
+		padding-bottom: 28px;
+	}
 	&__wrapper {
 	}
 
@@ -103,6 +127,133 @@ textarea {
 				}
 			}
 		}
+	}
+	.swiper-pagination {
+		padding: 3px 0px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.swiper-pagination-bullet {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #c4c4c4;
+		transition: 0.3s;
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+	.swiper-pagination-bullet-active {
+		transform: scale(1.3);
+		transition: 0.3s;
+		background: $color1;
+	}
+}
+.slider-calc {
+	margin: -20px;
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	.swiper-pagination {
+		flex: 0 0 auto;
+		&-fraction {
+			font-size: 16px;
+			color: $color3;
+		}
+		&-current {
+			margin-right: 3px;
+		}
+		&-total {
+			margin-left: 3px;
+		}
+	}
+	&__button {
+		margin-top: auto;
+	}
+
+	&__button-next {
+		margin: 0px 30px 0 10px;
+	}
+}
+.slider-calc-card {
+	margin: 20px auto;
+	max-width: 1120px;
+	min-height: 472px;
+	display: flex;
+	background: #ffffff;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	&__img {
+		position: relative;
+		flex: 0 0 400px;
+		height: 100%;
+		width: 400px;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// height: 3000px;
+			object-fit: cover;
+		}
+	}
+
+	&__container {
+		flex: 1 1 auto;
+		padding: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		// align-items: start;
+	}
+	&__block {
+	}
+	&__title {
+		font-weight: 800;
+		margin-bottom: 20px;
+	}
+
+	&__radio-block {
+		margin-bottom: 10px;
+	}
+
+	&__radio-box {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__radio-text {
+		color: $text3;
+	}
+	&__input-box {
+		margin-bottom: 15px;
+		.slider-calc-card__title {
+			margin-bottom: 10px;
+		}
+	}
+	&__input {
+		border: 1px solid $text1;
+		width: 100%;
+		margin-bottom: 20px;
+		box-sizing: border-box;
+	}
+	&__nav-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
 	}
 }
 /* slider end */
@@ -215,8 +366,8 @@ textarea {
 }
 /* request end */
 
-// popup 
-.popup{
+// popup
+.popup {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -224,7 +375,7 @@ textarea {
 	z-index: 99999;
 	width: 100%;
 	height: 100vh;
-	&__body{
+	&__body {
 		background: $text1;
 		width: 100%;
 		height: 100%;
@@ -232,29 +383,59 @@ textarea {
 		align-items: center;
 		justify-content: center;
 	}
-	.request{
+	.request {
 		background: $white;
 	}
-	.request__title{
+	.request__title {
 		color: $text1;
 	}
-	.request__descr{
+	.request__descr {
 		color: $text3;
 	}
-	.request__input{
+	.request__input {
 		background: $color2;
 	}
-	.request__agreement-link{
-		color: #29AFE9;
+	.request__agreement-link {
+		color: #29afe9;
 	}
-	.request__agreement-text{
+	.request__agreement-text {
 		color: $text1;
 	}
-	.checkbox-style{
+	.checkbox-style {
 		background: $color2;
 	}
-	.checkbox-none:checked+.checkbox-style{
+	.checkbox-none:checked + .checkbox-style {
 		background: $color2 url("../images/svg/check.svg") 5px 6px no-repeat;
 	}
 }
-// popup end 
+// popup end
+
+.btn-swipe {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	z-index: 30;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #1babea;
+	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.3s;
+	.icon-double-triangle-up {
+		margin-bottom: 3px;
+		color: $white;
+		font-size: 20px;
+	}
+	&:hover {
+		transition: 0.3s;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), $color1;
+	}
+	&:active {
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%), #1babea;
+		transition: 0.3s;
+	}
+}
