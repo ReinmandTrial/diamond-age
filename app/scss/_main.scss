@@ -47,28 +47,32 @@
       }
    }
 
-   &__socials-link {
-   }
-
-   &__contacts {
+   &__phone-icon {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
       display: flex;
-      align-items: start;
+      justify-content: center;
+      align-items: center;
       .icon-whatsapp {
-         margin-top: 2px;
-         margin-right: 10px;
+         // margin-top: 2px;
+         margin-top: unset;
+         margin-right: unset;
       }
    }
-   &__contacts-icon-link {
-   }
-
-   &__phone-num-block {
+   &__phone-row {
+      display: flex;
+      align-items: center;
+      // justify-content: flex-end;
       font-size: 20px;
       font-weight: 800;
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
    }
 
    &__phone-num {
       display: block;
-      margin-bottom: 5px;
    }
 }
 .icon-clock {
@@ -166,25 +170,10 @@
       }
    }
 
-   // &__item-body-bg {
-   //    position: absolute;
-   //    transform: translate(-50%, 0);
-   //    top: -10px;
-   //    left: 50%;
-   //    width: 100%;
-   //    height: calc(100% + 10px);
-   //    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-   //    z-index: -1;
-   //    & img {
-   //       width: 100%;
-   //       height: 100%;
-   //       object-fit: fill;
-   //    }
-   // }
    .icon-close {
       position: absolute;
       top: 34px;
-      right: 7px;
+      right: 10px;
       padding: 5px;
       color: $text1;
       z-index: 15;
@@ -251,11 +240,38 @@
    }
 
    &__contacts {
-      line-height: 2.37;
+      // display: flex;
+      // .icon-whatsapp {
+      //    margin-top: 8px;
+      // }
+   }
+   &__phone-icon {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
       display: flex;
+      justify-content: center;
+      align-items: center;
       .icon-whatsapp {
-         margin-top: 8px;
+         // margin-top: 2px;
+         margin-top: unset;
+         margin-right: unset;
       }
+   }
+   &__phone-row {
+      display: flex;
+      align-items: center;
+      // justify-content: flex-end;
+      // font-size: 20px;
+      // font-weight: 800;
+      &:not(:last-child) {
+         // margin-bottom: 10px;
+      }
+   }
+
+   &__phone-num {
+      line-height: 2.37;
+      display: block;
    }
 
    &__phone-num-block {
@@ -306,6 +322,14 @@
       border: unset;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), $color1;
       box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.15);
+      &:hover {
+         transition: 0.3s;
+         background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), $color1;
+      }
+      &:active {
+         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%), #1babea;
+         transition: 0.3s;
+      }
       .icon-mail {
          color: $white;
       }
@@ -556,9 +580,6 @@
       margin-bottom: 60px;
       font-weight: 800;
       text-align: center;
-   }
-
-   &__container {
    }
 
    &__block {

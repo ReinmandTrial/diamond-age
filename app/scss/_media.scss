@@ -332,8 +332,12 @@
    /* table end */
    .popup {
       .request {
-         width: unset;
+         width: 430px;
          flex: unset;
+         &__descr {
+            margin-left: auto;
+            margin-right: auto;
+         }
       }
    }
    /* request start */
@@ -394,9 +398,6 @@
 
       &__contacts {
          line-height: 2.53;
-         .icon-whatsapp {
-            margin-top: 9px;
-         }
       }
       &__adress {
          line-height: 2.53;
@@ -419,7 +420,7 @@
          font-size: 16px;
       }
 
-      &__phone-num-block {
+      &__phone-row {
          font-size: 16px;
       }
    }
@@ -721,6 +722,9 @@
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
+   .btn-swipe {
+      display: none;
+   }
    .cart__work {
       &-item {
          position: relative;
@@ -985,7 +989,11 @@
       }
    }
    /* banner end */
-
+   .popup {
+      .request {
+         width: 300px;
+      }
+   }
    /* footer start */
    .footer {
       &__block {
@@ -1072,6 +1080,10 @@
       &__payment img:not(:last-child) {
          margin-right: 8.7px;
       }
+      &__phone-icon {
+         width: 12px;
+         height: 12px;
+      }
       &__svg-mastercard {
          width: 35.63px;
          height: 21.89px;
@@ -1108,13 +1120,16 @@
          & .icon-whatsapp {
          }
       }
-      &__contacts-icon-link {
-         margin-top: -3px;
-      }
-      &__phone-num-block,
+      // &__contacts-icon-link {
+      //    margin-top: -3px;
+      // }
+      &__phone-row,
       &__schedule-text {
          font-size: 15px;
          font-weight: 700;
+      }
+      &__phone-icon {
+         margin-bottom: 1px;
       }
    }
    .icon-burger {
@@ -1126,7 +1141,7 @@
       font-size: 12px;
    }
    .header__schedule .icon-clock,
-   .header__contacts .icon-whatsapp {
+   .header__phone-icon {
       margin-right: 5px;
    }
    /* header end */
