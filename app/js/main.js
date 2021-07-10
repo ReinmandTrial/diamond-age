@@ -1,18 +1,14 @@
 $('.toggle-btn').on('click', function () {
    var btn = $(this);
    var block = btn.closest('.toggle-block');
-
-   btn.closest('.toggle-block').find('.toggle-body').slideToggle('slow');
-
-   block.find('.toggle-show').slideToggle('slow');
+   block.toggleClass('open');
+   if(block.hasClass('open')){
+      btn.closest('.toggle-block').find('.toggle-body').fadeIn();
+   }else{
+      btn.closest('.toggle-block').find('.toggle-body').fadeOut();
+   }
 })
 
-$('.toggle-btn--close').on('click', function () {
-   var btn = $(this);
-   var block = btn.closest('.toggle-block');
-   $(this).closest('.toggle-block').find('.toggle-body').slideToggle('slow');
-   block.find('.toggle-show').slideToggle('slow');
-})
 
 
 //burger mobile
@@ -45,8 +41,8 @@ new Swiper('.slider-price-all__container', {
 /* slidercalc start */
 new Swiper('.slider-calc', {
    navigation: {
-      nextEl: '',
-      prevEl: '',
+      nextEl: '.slider-calc__button-next',
+      prevEl: '.slider-calc__button-prev',
    },
    simulateTouch: false,
    // touchRatio: 0,
@@ -93,5 +89,38 @@ $(document).on('click', function (e) {
    }
    e.stopPropagation();
 });
+$('.popup-close').on('click',function(){
+   $('.popup').fadeOut();
+})
    //нажатие вне body
 //popup end
+
+//плавная прокрутка
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+   e.preventDefault()
+
+   const blockID = anchor.getAttribute('href').substr(1)
+
+   document.getElementById(blockID).scrollIntoView({
+     behavior: 'smooth',
+     block: 'start'
+   })
+  })
+}
+
+
+// $(document).ready(function(){
+//    $(window).on('scroll', checkScrollTop);
+
+//   checkScrollTop();
+//   function checkScrollTop(){
+//       if(window.pageYOffset >= 300){
+//          $('.btn-swipe').addClass('active');
+//       }else{
+//          $('.btn-swipe').removeClass('active');
+//       }
+//    }
+// })
