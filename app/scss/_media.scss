@@ -330,7 +330,12 @@
    }
 
    /* table end */
-
+   .popup {
+      .request {
+         width: unset;
+         flex: unset;
+      }
+   }
    /* request start */
    .request {
       width: 350px;
@@ -642,6 +647,11 @@
    }
    /* footer end */
 
+   .banner {
+      &__content {
+         padding: 40px 0px 70px 0px;
+      }
+   }
    /* header start */
    .menu {
       display: none;
@@ -652,6 +662,7 @@
       background: $white;
       // width: calc(100% + 30px);
       width: 100%;
+      height: 100vh;
       z-index: 12;
       padding: 110px 0px 90px 0px;
       color: $text2;
@@ -955,6 +966,9 @@
       }
    }
    .slider-price-all {
+      .swiper-pagination {
+         display: flex;
+      }
       margin-right: -10px;
       // flex: 1 1 auto;
       &__wrapper {
@@ -975,7 +989,7 @@
    /* footer start */
    .footer {
       &__block {
-         width: 50%;
+         width: 100%;
          margin: 0 0 20px 0;
          flex: unset;
          padding-right: 10px;
@@ -1048,8 +1062,7 @@
          }
       }
       &__socials-text {
-         width: 100%;
-         margin-bottom: 5px;
+         margin-bottom: 15px;
       }
       &__svg-world {
          margin-bottom: 6px;

@@ -19,6 +19,7 @@
    }
 
    &__info {
+      margin-left: auto;
       margin-right: calc(50px + (40 - 50) * ((100vw - 1366px) / (1920 - 1366)));
    }
 
@@ -89,6 +90,7 @@
    right: -5px;
    padding: 5px;
    cursor: pointer;
+   font-size: 22px;
 }
 
 .logo {
@@ -437,6 +439,7 @@
    background: $color4;
    &__title {
       font-weight: 800;
+      text-align: center;
       margin-bottom: 50px;
    }
 
@@ -611,8 +614,9 @@
 
    &__img {
       width: calc(100% - 15px);
-      height: 100%;
+      min-height: 100px;
       border-radius: 10px;
+      overflow: hidden;
       & img {
          width: 100%;
          height: 100%;
@@ -715,6 +719,7 @@
    }
 
    &__title {
+      text-align: center;
       font-weight: 800;
       margin-bottom: 50px;
    }
@@ -749,6 +754,7 @@
    }
 
    &__slide-title {
+      font-weight: 600;
       line-height: 1.25;
       margin-bottom: 10px;
    }
@@ -859,10 +865,10 @@
       }
    }
    .completed-button-prev {
-      left: -40px;
+      left: calc(-12px + (40 - -12) * ((100vw - 1400px) / (1920 - 1400)));
    }
    .completed-button-next {
-      right: -40px;
+      right: calc(-12px + (40 - -12) * ((100vw - 1400px) / (1920 - 1400)));
    }
    &__content {
       // width: max-content;

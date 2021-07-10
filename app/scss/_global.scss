@@ -136,6 +136,7 @@ textarea {
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		display: none;
 	}
 	.swiper-pagination-bullet {
 		width: 6px;
@@ -193,7 +194,7 @@ textarea {
 	&__img {
 		position: relative;
 		flex: 0 0 400px;
-		height: 100%;
+		min-height: 472px;
 		width: 400px;
 
 		& img {
@@ -384,6 +385,7 @@ textarea {
 		justify-content: center;
 	}
 	.request {
+		position: relative;
 		background: $white;
 	}
 	.request__title {
@@ -406,6 +408,16 @@ textarea {
 	}
 	.checkbox-none:checked + .checkbox-style {
 		background: $color2 url("../images/svg/check.svg") 5px 6px no-repeat;
+	}
+	.popup-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		padding: 5px;
+		background: transparent;
+		.icon-close {
+			font-size: 14px;
+		}
 	}
 }
 // popup end

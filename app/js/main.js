@@ -2,9 +2,9 @@ $('.toggle-btn').on('click', function () {
    var btn = $(this);
    var block = btn.closest('.toggle-block');
    block.toggleClass('open');
-   if(block.hasClass('open')){
+   if (block.hasClass('open')) {
       btn.closest('.toggle-block').find('.toggle-body').fadeIn();
-   }else{
+   } else {
       btn.closest('.toggle-block').find('.toggle-body').fadeOut();
    }
 })
@@ -45,6 +45,7 @@ new Swiper('.slider-calc', {
       prevEl: '.slider-calc__button-prev',
    },
    simulateTouch: false,
+   touchRatio: 0,
    // touchRatio: 0,
    // slidesPerView: 1,
    pagination: {
@@ -89,26 +90,26 @@ $(document).on('click', function (e) {
    }
    e.stopPropagation();
 });
-$('.popup-close').on('click',function(){
+$('.popup-close').on('click', function () {
    $('.popup').fadeOut();
 })
-   //нажатие вне body
+//нажатие вне body
 //popup end
 
 //плавная прокрутка
 const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-   e.preventDefault()
+   anchor.addEventListener('click', function (e) {
+      e.preventDefault()
 
-   const blockID = anchor.getAttribute('href').substr(1)
+      const blockID = anchor.getAttribute('href').substr(1)
 
-   document.getElementById(blockID).scrollIntoView({
-     behavior: 'smooth',
-     block: 'start'
+      document.getElementById(blockID).scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+      })
    })
-  })
 }
 
 
