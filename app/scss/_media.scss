@@ -1,21 +1,55 @@
 // MAX-WIDTH 1600PX breakpoints START
 @media (max-width: 1600px) {
+   .completed {
+      .completed-button-prev {
+         left: calc(-17px - (45 + -12) * ((100vw - 1400px) / (1600 - 1400)));
+      }
+      .completed-button-next {
+         right: calc(-17px - (45 + -12) * ((100vw - 1400px) / (1600 - 1400)));
+      }
+   }
 }
 // MAX-WIDTH 1600PX breakpoints END
 
 // MAX-WIDTH 1399.98PX breakpoints START
 @media (max-width: 1399.98px) {
+   .call-back-el {
+      &__content {
+         padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1366 - 320))) 0px
+            calc(40px + (110 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+      }
+      &__title {
+         font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1366 - 320)));
+      }
+   }
+   .description {
+      &__content {
+         padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px
+            calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+      }
+      &__body {
+         & img {
+            height: 298px;
+         }
+      }
+   }
    /* page-main start */
    .completed {
       padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
       &__title {
          margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1366 - 320)));
       }
-      .completed-button-prev .icon {
-         font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1366 - 320)));
+      .completed-button-prev {
+         left: -30px;
+         .icon {
+            font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1366 - 320)));
+         }
       }
-      .completed-button-next .icon {
-         font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1366 - 320)));
+      .completed-button-next {
+         right: -30px;
+         .icon {
+            font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1366 - 320)));
+         }
       }
       &__silder {
          margin-bottom: calc(15px + (40 - 15) * ((100vw - 320px) / (1366 - 320)));
@@ -470,6 +504,24 @@
 
 // MAX-WIDTH 1199.98PX breakpoints START
 @media (max-width: 1199.98px) {
+   .description {
+      &__body img {
+         height: calc(187px + (290 - 187) * ((100vw - 768px) / (1199 - 768)));
+      }
+   }
+   .table {
+      &__container {
+         margin-right: 10px;
+      }
+   }
+   .strengthening {
+      .table {
+         width: calc(50% - 5px);
+         &:first-child {
+            margin-right: 10px;
+         }
+      }
+   }
    .cart__work {
       padding: 10px 10px 20px 10px;
       margin: 10px;
@@ -550,6 +602,59 @@
 
 // MAX-WIDTH 991.98PX breakpoints START
 @media (max-width: 991.98px) {
+   .page-servises {
+      .banner {
+         &__content {
+            padding: 40px 0px;
+            // max-width: 727px;
+         }
+      }
+   }
+   .description {
+      &__block {
+         // margin-bottom: 50px;
+         // display: flex;
+         // &.only-text {
+         //    &:nth-child(odd) {
+         //       .description__body {
+         //          margin-right: unset;
+         //          width: 100%;
+         //       }
+         //    }
+         // }
+         &:nth-child(odd) {
+            .description__body {
+               // margin-right: 30px;
+               & img {
+                  // float: right;
+                  margin: 0px 0px 10px 10px;
+               }
+            }
+         }
+         &:nth-child(even) {
+            .description__body {
+               // margin-right: 30px;
+               & img {
+                  // float: left;
+                  margin: 0px 10px 10px 0px;
+               }
+            }
+         }
+      }
+   }
+   .table {
+      &__container {
+         margin-right: 0px;
+      }
+   }
+   .strengthening {
+      .table {
+         width: calc(50% - 5px);
+         &:first-child {
+            margin-right: 10px;
+         }
+      }
+   }
    .cart__work {
       &-img {
          height: calc(155px + (295 - 155) * ((100vw - 576px) / (991 - 576)));
@@ -722,6 +827,58 @@
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
+   .call-back-el {
+      // padding: 20px 20px 30px 20px;
+      &__container {
+         flex-direction: column;
+         margin-bottom: unset;
+      }
+      &__title {
+         text-align: center;
+         margin-bottom: 10px;
+      }
+      &__descr {
+         text-align: center;
+         margin-bottom: 15px;
+      }
+      &__input-block {
+         width: 100%;
+         margin-bottom: 10px;
+      }
+      &__textarea-box {
+         width: 100%;
+         margin-bottom: 15px;
+      }
+      &__textarea {
+         height: 150px;
+      }
+      &__btn-box {
+         flex-direction: column;
+         align-items: start;
+      }
+      &__btn {
+         order: 2;
+         width: 100%;
+      }
+      &__agreement {
+         order: 1;
+         margin-bottom: 15px;
+      }
+   }
+   .table {
+      &__container {
+         flex-direction: column;
+         margin-bottom: 30px;
+      }
+   }
+   .strengthening {
+      .table {
+         width: 100%;
+         &:first-child {
+            margin-right: unset;
+         }
+      }
+   }
    .btn-swipe {
       display: none;
    }
@@ -820,6 +977,60 @@
 
 // MAX-WIDTH 576.98PX breakpoints START
 @media (max-width: 575.98px) {
+   .call-back-el {
+      padding: 20px 20px 30px 20px;
+      &__input-box {
+         .icon-profile,
+         .icon-mail,
+         .icon-phone {
+            font-size: 16px;
+            top: 12px;
+            left: 19px;
+         }
+      }
+      &__textarea-box {
+         .icon-comm {
+            font-size: 16px;
+            top: 12px;
+            left: 19px;
+         }
+      }
+      &__textarea {
+         height: 80px;
+      }
+   }
+   .description {
+      &__block {
+         margin-bottom: 20px;
+         &.only-text {
+            display: none;
+         }
+         &:nth-child(odd) {
+            .description__body {
+               & img {
+                  float: none;
+                  margin: 0px 0px 15px 0px;
+               }
+            }
+         }
+         &:nth-child(even) {
+            .description__body {
+               & img {
+                  float: none;
+                  margin: 0px 0px 15px 0px;
+               }
+            }
+         }
+      }
+      &__body img {
+         width: 100%;
+         border-radius: 5px;
+         height: calc(165px + (306 - 165) * ((100vw - 320px) / (575 - 320)));
+      }
+      &__subtitle {
+         display: none;
+      }
+   }
    .cart__work {
       padding: 10px 10px 20px 10px;
       margin: 10px 20px;
@@ -1175,7 +1386,8 @@
          }
       }
    }
-   .input {
+   .input,
+   textarea {
       font-size: 15px;
       background: #ffffff;
       border-radius: 10px;

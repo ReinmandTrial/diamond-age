@@ -287,6 +287,63 @@ textarea {
 			background: $color2;
 		}
 	}
+	&__container {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: start;
+		margin-right: 30px;
+	}
+}
+.strengthening {
+	& .table__column .table__row {
+		border-radius: 5px 0px 0px 5px;
+	}
+	& .table__column:last-child .table__row {
+		border-radius: 0px 5px 5px 0px;
+	}
+	.table {
+		width: calc(50% - 15px);
+		display: flex;
+		flex-wrap: wrap;
+		&:first-child {
+			margin-right: 30px;
+		}
+		&__subtitle {
+			width: 100%;
+			max-width: unset;
+		}
+		&.large {
+			.table__row:nth-child(odd) {
+				background: unset;
+			}
+			.table__row:nth-child(even) {
+				background: $color2;
+			}
+			.table__row__row {
+				&.large {
+					width: 100%;
+				}
+			}
+		}
+		&__row {
+			&.large {
+				font-weight: 700;
+				width: 100%;
+				border-radius: 5px;
+				color: $text1;
+			}
+		}
+
+		&__column {
+			width: 50%;
+			&:first-child .table__row {
+				border-radius: 5px 0px 0px 5px;
+			}
+			&:last-child .table__row {
+				border-radius: 0px 5px 5px 0px;
+			}
+		}
+	}
 }
 
 /* table end */
@@ -300,6 +357,7 @@ textarea {
 	background: linear-gradient(180deg, #0b3973 0%, #0e2e57 100%);
 	border-radius: 10px;
 	color: $white;
+	align-self: start;
 	&__title {
 		font-weight: 800;
 		margin-bottom: 15px;
@@ -309,7 +367,7 @@ textarea {
 	&__descr {
 		text-align: center;
 		font-size: 17px;
-		max-width: 290px;
+		max-width: 294px;
 		line-height: 1.47;
 		margin: 0 auto;
 		margin-bottom: 30px;

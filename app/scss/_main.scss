@@ -888,10 +888,10 @@
       }
    }
    .completed-button-prev {
-      left: calc(-12px + (40 - -12) * ((100vw - 1400px) / (1920 - 1400)));
+      left: -45px;
    }
    .completed-button-next {
-      right: calc(-12px + (40 - -12) * ((100vw - 1400px) / (1920 - 1400)));
+      right: -45px;
    }
    &__content {
       // width: max-content;
@@ -909,3 +909,204 @@
 }
 
 /* page-main end */
+
+/* page-servises end */
+.page-servises {
+   .banner {
+      &__content {
+         padding: 60px 0px 100px 0px;
+         // max-width: 727px;
+      }
+   }
+}
+.description {
+   background: $color4;
+   &__content {
+      padding: 120px 0;
+   }
+
+   &__block {
+      margin-bottom: 50px;
+      display: flex;
+      &.only-text {
+         &:nth-child(odd) {
+            .description__body {
+               margin-right: unset;
+               width: 100%;
+            }
+         }
+      }
+      &:nth-child(odd) {
+         .description__body {
+            // margin-right: 30px;
+            & img {
+               float: right;
+               margin: 0px 0px 10px 30px;
+            }
+         }
+      }
+      &:nth-child(even) {
+         .description__body {
+            // margin-right: 30px;
+            & img {
+               float: left;
+               margin: 0px 30px 10px 0px;
+            }
+         }
+      }
+   }
+
+   &__body {
+      // width: calc(50% - 15px);
+      line-height: 1.65;
+      // & > div:first-child {
+      //    margin-bottom: 30px;
+      // }
+      & img {
+         width: calc(50% - 30px);
+         height: 364px;
+         object-fit: cover;
+         border-radius: 10px;
+         overflow: hidden;
+      }
+   }
+
+   &__text {
+      .bold {
+         font-weight: 700;
+      }
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__subtitle {
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 20px;
+   }
+
+   &__list {
+      margin-bottom: 20px;
+   }
+
+   &__item {
+      padding-left: 26px;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 3.5px;
+         height: 3.5px;
+         background: $text1;
+         border-radius: 50%;
+         transform: translate(-50%, -50%);
+         top: 13.5px;
+         left: 13px;
+      }
+   }
+   &__btn {
+      display: block;
+      margin: 0 auto;
+   }
+}
+.call-back {
+   &__content {
+      padding: 60px 0 120px 0;
+   }
+}
+.call-back-el {
+   background: url("../images/call-img1.png") top left/cover no-repeat;
+   color: $white;
+   padding: 50px 60px;
+   border-radius: 10px;
+   &__body {
+      max-width: 650px;
+   }
+   &__title {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 5px;
+   }
+
+   &__descr {
+      margin-bottom: 20px;
+      line-height: 1.39;
+   }
+
+   &__container {
+      display: flex;
+      margin-bottom: 20px;
+   }
+   &__input-block {
+      width: calc(50% - 5px);
+      margin-right: 10px;
+   }
+   &__input-box {
+      position: relative;
+      .icon-profile,
+      .icon-mail,
+      .icon-phone {
+         font-size: 24px;
+         position: absolute;
+         top: 18px;
+         left: 19px;
+         color: $color3;
+      }
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__input {
+      width: 100%;
+   }
+
+   &__textarea-box {
+      position: relative;
+      width: calc(50% - 5px);
+      height: 100%;
+      .icon-comm {
+         font-size: 24px;
+         position: absolute;
+         top: 18px;
+         left: 19px;
+         color: $color3;
+      }
+   }
+   &__textarea {
+      width: 100%;
+      // height: 100%;
+      height: 200px;
+   }
+
+   &__btn-box {
+      display: flex;
+      align-items: center;
+   }
+
+   &__btn {
+      width: calc(50% - 5px);
+      margin-right: 20px;
+   }
+
+   &__agreement {
+      display: flex;
+      align-items: center;
+   }
+
+   &__agreement-text {
+      font-size: 15px;
+      line-height: 1.67;
+      color: #6380a5;
+   }
+   &__agreement-link {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+         text-decoration: none;
+      }
+   }
+}
+
+/* page-servises end */
