@@ -1,3 +1,13 @@
+@keyframes si-button-pulse {
+   from {
+      box-shadow: 0 0 8px 6px #ffad1f, 0 0 12px 14px #ffad1f;
+   }
+
+   to {
+      box-shadow: 0 0 10px 4px rgba(255, 48, 26, 0), 0 0 5px 30px rgba(255, 48, 26, 0);
+   }
+}
+
 // MAX-WIDTH 1600PX breakpoints START
 @media (max-width: 1600px) {
    .completed {
@@ -13,19 +23,34 @@
 
 // MAX-WIDTH 1399.98PX breakpoints START
 @media (max-width: 1399.98px) {
-   .call-back-el {
+   .offer {
+      &__container {
+         padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1366 - 320))) 0px
+            calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+      }
+   }
+   .call-back {
       &__content {
          padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1366 - 320))) 0px
             calc(40px + (110 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
       }
+   }
+   .call-back-el {
       &__title {
          font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1366 - 320)));
       }
    }
+   .page-town {
+      .description {
+         &__content {
+            padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px
+               calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+         }
+      }
+   }
    .description {
-      &__content {
-         padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px
-            calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+      &__block {
+         margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1366 - 320)));
       }
       &__body {
          & img {
@@ -38,6 +63,9 @@
       padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
       &__title {
          margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1366 - 320)));
+      }
+      &__slider {
+         margin-bottom: 40px;
       }
       .completed-button-prev {
          left: -30px;
@@ -408,6 +436,10 @@
 
    .footer {
       background: $text1;
+      &__content {
+         padding: calc(30px + (50 - 30) * ((100vw - 320px) / (1366 - 320))) 0px
+            calc(40px + (60 - 40) * ((100vw - 320px) / (1366 - 320))) 0px;
+      }
       &__content.t6 {
          font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1366 - 320)));
       }
@@ -890,9 +922,12 @@
       }
    }
    .table {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
       &__container {
          flex-direction: column;
-         margin-bottom: 30px;
+         margin-bottom: 25px;
       }
    }
    .strengthening {
@@ -1001,6 +1036,24 @@
 
 // MAX-WIDTH 576.98PX breakpoints START
 @media (max-width: 575.98px) {
+   .servises__content,
+   .calc,
+   .call-back__content,
+   .offer__container {
+      padding: 20px 0px 40px 0px;
+   }
+   .material,
+   .reasons__content {
+      padding: 40px 0 20px 0;
+   }
+   .description__content,
+   .completed,
+   .tipes__content,
+   .use,
+   .price {
+      padding: 40px 0;
+   }
+
    .offer {
       .request {
          &__descr {
@@ -1009,6 +1062,11 @@
          &__title {
             margin-bottom: 10px;
          }
+      }
+   }
+   .page-servises {
+      .table__subtitle {
+         margin-top: 16px;
       }
    }
    .call-back-el {
@@ -1033,9 +1091,16 @@
          height: 80px;
       }
    }
+   .page-town {
+      .description {
+         &__subtitle {
+            display: block;
+         }
+      }
+   }
    .description {
       &__block {
-         margin-bottom: 20px;
+         margin-bottom: 25px;
          &.only-text {
             display: none;
          }
@@ -1082,6 +1147,9 @@
       }
    }
    .completed {
+      &__slider {
+         margin-bottom: 15px;
+      }
       &__slider-container {
          margin-left: 0px;
          margin-right: 0px;
@@ -1202,8 +1270,8 @@
    }
    .table {
       &__subtitle {
-         margin-top: 10px;
-         margin-bottom: 10px;
+         margin-top: 16px;
+         margin-bottom: 16px;
          max-width: 130px;
       }
 
@@ -1241,6 +1309,9 @@
    }
    /* footer start */
    .footer {
+      &__content {
+         padding: 30px 0 40px 0;
+      }
       &__block {
          width: 100%;
          margin: 0 0 20px 0;

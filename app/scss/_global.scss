@@ -445,6 +445,7 @@ textarea {
 	.request {
 		position: relative;
 		background: $white;
+		align-self: unset;
 	}
 	.request__title {
 		color: $text1;
