@@ -4,6 +4,7 @@
 .header {
    position: relative;
    background: transparent;
+   // background: $text1;
    &__content {
       margin-top: 45px;
       padding-right: 40px;
@@ -1237,3 +1238,178 @@
 }
 
 /* page-town end */
+
+/* page-text end */
+.page-text-cl {
+   .header {
+      background: $text1;
+      &__content {
+         margin-bottom: 50px;
+      }
+   }
+}
+.page-text {
+   &__content {
+      padding: 100px 0 130px 0;
+   }
+   &__text-container {
+      margin-bottom: 100px;
+   }
+
+   &__title {
+      font-weight: 800;
+      margin-bottom: 50px;
+   }
+
+   &__text-block {
+      line-height: 1.67;
+      color: $text2;
+   }
+
+   &__text {
+      margin-bottom: 30px;
+   }
+
+   &__list {
+   }
+
+   &__list-item {
+      padding-left: 26px;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 3.5px;
+         height: 3.5px;
+         background: $text1;
+         border-radius: 50%;
+         transform: translate(-50%, -50%);
+         top: 13.5px;
+         left: 13px;
+      }
+   }
+}
+
+.stages-of-work {
+   &__title {
+      margin-bottom: 50px;
+      font-weight: 800;
+   }
+
+   &__container {
+   }
+
+   &__nav {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+   }
+
+   &__item {
+      background: #ecf1f7;
+      border-radius: 10px;
+      padding: 23px 20px 18px 20px;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $text3;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-bottom: 5px;
+      &.active {
+         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #1babea;
+         box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.15);
+         text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+         color: $white;
+      }
+      // &:active {
+      //    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%), #1babea;
+      //    transition: 0.3s;
+      // }
+      &:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+}
+.stages-of-work-block {
+   background: $white;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   padding: 52px 46px 83px 78px;
+   display: none;
+   &.active {
+      display: flex;
+   }
+   &__img {
+      flex: 0 0 400px;
+      // width: 400px;
+      max-width: 400px;
+      height: 283px;
+      margin-top: 2px;
+      margin-right: 40px;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__text {
+      line-height: 1.67;
+      color: $text2;
+      font-size: 18px;
+      margin-bottom: 26px;
+   }
+   &__title {
+      font-weight: 700;
+      margin-bottom: 30px;
+   }
+
+   &__list {
+   }
+
+   &__list-item {
+   }
+
+   &__info {
+      display: flex;
+   }
+
+   &__important {
+      display: flex;
+      color: #0b3973;
+      font-size: 18px;
+      .icon-pen,
+      .icon-doc {
+         font-size: 24px;
+         margin-right: 10px;
+         margin-top: 3px;
+      }
+      &:not(:last-child) {
+         margin-right: 35px;
+      }
+   }
+
+   &__important-box {
+   }
+
+   &__important-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 7px;
+   }
+
+   &__important-text {
+      // line-height: 1.67;
+   }
+}
+/* page-text end */
