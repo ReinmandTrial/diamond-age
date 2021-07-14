@@ -125,3 +125,29 @@ for (let anchor of anchors) {
 //       }
 //    }
 // })
+// четвертая страница
+$('.stages-of-work__item').on('click',function(){
+   var btn = $(this);
+   var btns = btn.closest('.stages-of-work__nav').find('.stages-of-work__item');
+   var count;
+   var blocks = btn.closest('.stages-of-work__container').find('.stages-of-work-block');
+   $(btns).each(function(){
+      $(this).removeClass('active');
+   })
+   btn.addClass('active');
+
+   $(btns).each(function(index){
+      if($(this).hasClass('active')){
+         count = index;
+      }
+   })
+
+   $(blocks).each(function(index){
+      if(index === count){
+         $(this).addClass('active')
+      }else{
+         $(this).removeClass('active')
+      }
+   })
+})
+// четвертая страница
