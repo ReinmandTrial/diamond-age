@@ -529,7 +529,7 @@ textarea {
 		}
 		&.disable {
 			color: $text3;
-			text-decoration-line: underline;
+			text-decoration-line: unset;
 		}
 	}
 

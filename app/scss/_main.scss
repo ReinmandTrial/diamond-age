@@ -361,9 +361,11 @@
       .icon-inst {
          font-size: 20px;
          margin-right: 10px;
+         cursor: pointer;
       }
       .icon-vk {
          font-size: 20px;
+         cursor: pointer;
       }
    }
 
@@ -1270,9 +1272,6 @@
       margin-bottom: 30px;
    }
 
-   &__list {
-   }
-
    &__list-item {
       padding-left: 26px;
       position: relative;
@@ -1308,7 +1307,7 @@
    &__item {
       background: #ecf1f7;
       border-radius: 10px;
-      padding: 23px 20px 18px 20px;
+      padding: 23px 30px 18px 30px;
       font-weight: 600;
       font-size: 16px;
       text-align: center;
